@@ -148,48 +148,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="footer-section products">
                         <h4 class="footer-title">Ürün Kategorileri</h4>
                         <ul class="footer-menu">
-                            <li><a href="cami-hali.html">Cami Halıları</a></li>
-                            <li><a href="seccade.html">Seccadeler</a></li>
-                            <li><a href="mihrap-hali.html">Mihrap Halıları</a></li>
-                            <li><a href="minber-hali.html">Minber Halıları</a></li>
-                            <li><a href="ozel-tasarim.html">Özel Tasarım</a></li>
+                            <li><a href="https://www.kasminahali.com.tr/cami-halisi/">Cami Halıları</a></li>
+                            <li><a href="https://www.kasminahali.com.tr/otel-halilari/">Otel Halıları</a></li>
+                            <li><a href="https://www.kasminahali.com.tr/yurt-halilari/">Yurt Halıları</a></li>
+                            <li><a href="https://www.kasminahali.com.tr/yat-halilari/">Yat Halıları</a></li>
                         </ul>
                     </div>
 
-                    <!-- Contact Info -->
-                    <div class="footer-section contact-info">
-                        <h4 class="footer-title">İletişim Bilgileri</h4>
-                        <div class="contact-details">
-                            <div class="contact-detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="detail-content">
-                                    <p>Merkez Mah. Halıcılar Cad. No:123<br>
-                                        Fatih / İstanbul</p>
-                                </div>
-                            </div>
-                            <div class="contact-detail">
-                                <i class="fas fa-phone"></i>
-                                <div class="detail-content">
-                                    <p>+90 (212) 123 45 67<br>
-                                        +90 (535) 123 45 67</p>
-                                </div>
-                            </div>
-                            <div class="contact-detail">
-                                <i class="fas fa-envelope"></i>
-                                <div class="detail-content">
-                                    <p>info@kutsalhali.com<br>
-                                        satis@kutsalhali.com</p>
-                                </div>
-                            </div>
-                            <div class="contact-detail">
-                                <i class="fas fa-clock"></i>
-                                <div class="detail-content">
-                                    <p>Pazartesi - Cumartesi<br>
-                                        09:00 - 18:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                 
                 </div>
             </div>
         </div>
@@ -218,10 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
-                    <div class="footer-links">
-                        <a href="gizlilik.html">Gizlilik Politikası</a>
-                        <a href="kullanim.html">Kullanım Koşulları</a>
-                    </div>
+                    
                 </div>
             </div>
         </div>
