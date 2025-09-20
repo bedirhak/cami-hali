@@ -60,6 +60,7 @@ body {
     color: var(--text-dark);
     background-color: var(--white);
     overflow-x: hidden;
+    /* Header offset for fixed header */
 }
 
 .container {
@@ -126,6 +127,7 @@ a {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 15px 30px;
     border: none;
@@ -160,6 +162,36 @@ a {
 .btn-outline:hover {
     background: var(--white);
     color: var(--primary-color);
+}
+
+/* =====================================================
+   HEADER HERO STYLES
+   ===================================================== */
+
+.header-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--islamic-green));
+    color: var(--white);
+    text-align: center;
+    padding: 195px 0 40px 0;
+    /* 155px + 40px padding top, 40px bottom */
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    background-size: 50px 50px;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
 }
 
 /* =====================================================
@@ -239,6 +271,7 @@ a {
 /* Main Navigation */
 .main-nav {
     padding: 20px 0;
+    position: relative;
 }
 
 .nav-content {
@@ -282,7 +315,7 @@ a {
     display: flex;
     list-style: none;
     gap: 40px;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .menu-link {
@@ -455,10 +488,13 @@ a {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+
+
+
 }
 
 .slide.active {
@@ -600,16 +636,6 @@ a {
     padding-bottom: 10px;
 }
 
-.footer-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background: var(--secondary-color);
-}
-
 .footer-menu {
     list-style: none;
 }
@@ -632,7 +658,6 @@ a {
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .contact-detail {
@@ -710,6 +735,241 @@ a {
 }
 
 /* =====================================================
+   CTA TOP SECTION
+   ===================================================== */
+
+.cta-top {
+    padding: 70px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cta-top-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cta-top-text {
+    flex: 2;
+}
+
+.cta-top-text h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.cta-top-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.cta-top-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-outline-dark {
+    background: transparent;
+    color: var(--text-dark);
+    border: 2px solid var(--text-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-outline-dark:hover {
+    background: var(--text-dark);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .cta-top {
+        padding: 50px 0;
+    }
+
+    .cta-top-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-top-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-top-buttons {
+        width: 100%;
+    }
+
+    .hero-text {
+        max-width: 70vw;
+    }
+}
+
+/* =====================================================
+   PRODUCTS SECTION
+   ===================================================== */
+
+.products-section {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--secondary-color);
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    flex: 0 0 calc(25% - 20px);
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-smooth);
+    background: var(--white);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.product-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-content {
+    padding: 25px;
+}
+
+.product-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.product-content p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.product-btn {
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    font-weight: 600;
+}
+
+.product-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.see-all-products {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .products-section {
+        padding: 40px 0;
+    }
+
+    .product-card {
+        flex: 0 0 calc(33.333% - 20px);
+    }
+
+    .footer-section.contact-info {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-section {
+        padding: 30px 0;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .product-card {
+        flex: 0 0 calc(50% - 15px);
+    }
+
+    .footer-section h3 {
+        margin: auto;
+    }
+
+    .contact-detail {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 0 0 100%;
+    }
+}
+
+/* =====================================================
    RESPONSIVE DESIGN
    ===================================================== */
 
@@ -729,6 +989,9 @@ a {
 }
 
 @media (max-width: 768px) {
+    .menu-list {
+        gap: 0 !important;
+    }
 
     /* Header */
     .top-bar {
@@ -741,10 +1004,69 @@ a {
 
     .main-menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid var(--border-light);
+        z-index: 1000;
+    }
+
+    .main-menu.active {
+        display: block;
+    }
+
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .menu-list.active {
+        display: flex;
+    }
+
+    .menu-list.active .menu-item {
+        padding: 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .menu-list.active .menu-item:last-child {
+        border-bottom: none;
+    }
+
+    .menu-list.active .menu-link {
+        text-align: center;
+        display: block;
+        padding: 20px;
+        color: var(--text-dark);
+        text-decoration: none;
+        transition: var(--transition-smooth);
+    }
+
+    .menu-list.active .menu-link:hover {
+        background: var(--bg-light);
+        color: var(--primary-color);
     }
 
     .mobile-toggle {
         display: flex;
+    }
+
+    .mobile-toggle.active .toggle-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .mobile-toggle.active .toggle-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-toggle.active .toggle-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 
     .header-cta {
@@ -768,7 +1090,7 @@ a {
 
     .hero-buttons {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .slider-nav {

@@ -228,7 +228,6 @@ class FormHandler {
             form.reset();
 
         } catch (error) {
-            console.error('Form submission error:', error);
             this.showMessage('Bir hata oluştu. Lütfen daha sonra tekrar deneyin.', 'error');
         } finally {
             // Restore button state
@@ -399,7 +398,6 @@ class AccessibilityEnhancer {
 
     init() {
         // Skip link functionality
-        this.addSkipLinks();
 
         // Focus management
         this.manageFocus();
@@ -411,14 +409,7 @@ class AccessibilityEnhancer {
         this.enhanceKeyboardNav();
     }
 
-    addSkipLinks() {
-        const skipLink = document.createElement('a');
-        skipLink.href = '#main-content';
-        skipLink.textContent = 'Ana içeriğe geç';
-        skipLink.className = 'skip-link';
 
-        document.body.insertBefore(skipLink, document.body.firstChild);
-    }
 
     manageFocus() {
         // Focus trap for mobile menu
@@ -556,22 +547,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Global error handling
-window.addEventListener('error', (e) => {
-    console.error('Global error:', e.error);
-    // Could send error to analytics service here
-});
+
 
 // Performance monitoring
 if ('performance' in window) {
     window.addEventListener('load', () => {
         setTimeout(() => {
             const perfData = performance.getEntriesByType('navigation')[0];
-            console.log('Page load performance:', {
-                domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-                loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
-                totalTime: perfData.loadEventEnd - perfData.fetchStart
-            });
+
         }, 100);
     });
 }

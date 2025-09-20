@@ -16,101 +16,13 @@
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <!-- Main CSS -->
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header class="main-header">
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div class="container">
-                <div class="top-bar-content">
-                    <div class="contact-info">
-                        <span class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+902121234567">+90 (212) 123 45 67</a>
-                        </span>
-                        <span class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:info@kutsalhali.com">info@kutsalhali.com</a>
-                        </span>
-                        <span class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>İstanbul, Türkiye</span>
-                        </span>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Header -->
-        <div class="main-nav">
-            <div class="container">
-                <div class="nav-content">
-                    <!-- Logo -->
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="assets/images/logo.png" alt="Kutsal Halı" class="logo-img">
-                            <div class="logo-text">
-                                <h1>Kutsal Halı</h1>
-                                <span>Cami Halıları Uzmanı</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Navigation Menu -->
-                    <nav class="main-menu">
-                        <ul class="menu-list">
-                            <li class="menu-item active">
-                                <a href="index.html" class="menu-link">Ana Sayfa</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="detay.html" class="menu-link">Ürünlerimiz</a>
-                            </li>
-
-                            <li class="menu-item">
-                                <a href="iletisim.html" class="menu-link">İletişim</a>
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <!-- Mobile Menu Toggle -->
-                    <div class="mobile-toggle">
-                        <span class="toggle-line"></span>
-                        <span class="toggle-line"></span>
-                        <span class="toggle-line"></span>
-                    </div>
-
-                    <!-- CTA Button -->
-                    <div class="header-cta">
-                        <a href="iletisim.html" class="cta-button">
-                            <i class="fas fa-quote-left"></i>
-                            Teklif Al
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Header will be loaded automatically -->
+    <div id="header-placeholder"></div>
 
     <!-- Hero Slider Section -->
     <section class="hero-slider">
@@ -142,10 +54,11 @@
 
             <!-- Sliding Images -->
             <div class="slider-images">
-                <div class="slide slide-1 active" style="background-image: url('assets/images/slide1.jpg')"></div>
-                <div class="slide slide-2" style="background-image: url('assets/images/slide2.jpg')"></div>
-                <div class="slide slide-3" style="background-image: url('assets/images/slide3.jpg')"></div>
-                <div class="slide slide-4" style="background-image: url('assets/images/slide4.jpg')"></div>
+                <div class="slide slide-1 active" style="background-image: url('assets/images/slider/slider1.jpg')">
+                </div>
+                <div class="slide slide-2" style="background-image: url('assets/images/slider/slider2.jpg')"></div>
+                <div class="slide slide-3" style="background-image: url('assets/images/slider/slider3.jpg')"></div>
+                <div class="slide slide-4" style="background-image: url('assets/images/slider/slider4.jpg')"></div>
             </div>
 
             <!-- Slider Indicators -->
@@ -168,133 +81,242 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="container">
-                <div class="footer-grid">
-                    <!-- Company Info -->
-                    <div class="footer-section company-info">
-                        <div class="footer-logo">
-                            <img src="assets/images/logo-white.png" alt="Kutsal Halı" class="footer-logo-img">
-                            <h3>Kutsal Halı</h3>
-                        </div>
-                        <p class="company-description">
-                            25 yıldır cami halıları, seccade ve mihrap halısı üretiminde
-                            öncü firmayız. Geleneksel motiflerimizle modern kaliteyi birleştiriyoruz.
+    <section class="cta-top">
+        <div class="container">
+            <div class="cta-top-content">
+                <div class="cta-top-text">
+                    <h2>Profesyonel Cami Halı Çözümleri</h2>
+                    <p>25 yıllık tecrübemizle, ibadethaneleriniz için en kaliteli ve dayanıklı halı çözümlerini
+                        sunuyoruz. Özel tasarım ve ölçülerde cami halıları için bizimle iletişime geçin.</p>
+                </div>
+                <div class="cta-top-buttons">
+                    <a href="detay.html" class="btn btn-primary">
+                        <i class="fas fa-mosque"></i>
+                        Projelerimizi İnceleyin
+                    </a>
+                    <a href="iletisim.html" class="btn btn-outline-dark">
+                        <i class="fas fa-phone-alt"></i>
+                        Ücretsiz Keşif
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Desenlerimiz</h2>
+                <p>En kaliteli malzemelerle üretilen, ibadethanelerinize özel tasarlanmış cami halı modellerimiz</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Ürün Kartları -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen1.jpg" alt="Saflı Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Saflı Cami Halısı</h3>
+                        <p>Geleneksel motiflerle tasarlanmış, yüksek kaliteli saflı cami halısı modeli.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen2.jpg" alt="Göbekli Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Göbekli Cami Halısı</h3>
+                        <p>Klasik göbek deseni ile tasarlanmış, akrilik iplikten üretilmiş cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen3.jpg" alt="Modern Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Modern Cami Halısı</h3>
+                        <p>Modern tasarım anlayışıyla oluşturulmuş, dayanıklı ve kolay temizlenebilir cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen8.jpg" alt="Yün Saflı Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Yün Saflı Cami Halısı</h3>
+                        <p>%100 yün iplikten üretilmiş, doğal ve yüksek kaliteli saflı cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen4.jpg" alt="Mihrap Desenli Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Mihrap Desenli Cami Halısı</h3>
+                        <p>Geleneksel mihrap desenleriyle bezenmiş, yüksek kaliteli yün cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen5.jpg" alt="Osmanlı Desen Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Osmanlı Desen Cami Halısı</h3>
+                        <p>Osmanlı motiflerinden esinlenilen, yüksek kaliteli akrilik iplikten üretilmiş cami halısı.
                         </p>
-                        <div class="company-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">500+</span>
-                                <span class="stat-label">Proje</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">25</span>
-                                <span class="stat-label">Yıl Deneyim</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">50+</span>
-                                <span class="stat-label">Şehir</span>
-                            </div>
-                        </div>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
                     </div>
+                </div>
 
-                    <!-- Quick Links -->
-                    <div class="footer-section quick-links">
-                        <h4 class="footer-title">Hızlı Bağlantılar</h4>
-                        <ul class="footer-menu">
-                            <li><a href="index.html">Ana Sayfa</a></li>
-                            <li><a href="detay.html">Ürünlerimiz</a></li>
-                            <li><a href="iletisim.html">İletişim</a></li>
-                        </ul>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen6.jpg" alt="Selçuklu Desen Cami Halısı">
                     </div>
-
-                    <!-- Products -->
-                    <div class="footer-section products">
-                        <h4 class="footer-title">Ürün Kategorileri</h4>
-                        <ul class="footer-menu">
-                            <li><a href="cami-hali.html">Cami Halıları</a></li>
-                            <li><a href="seccade.html">Seccadeler</a></li>
-                            <li><a href="mihrap-hali.html">Mihrap Halıları</a></li>
-                            <li><a href="minber-hali.html">Minber Halıları</a></li>
-                            <li><a href="ozel-tasarim.html">Özel Tasarım</a></li>
-                        </ul>
+                    <div class="product-content">
+                        <h3>Selçuklu Desen Cami Halısı</h3>
+                        <p>Selçuklu motiflerinden ilham alınarak tasarlanmış, şık ve dayanıklı cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
                     </div>
+                </div>
 
-                    <!-- Contact Info -->
-                    <div class="footer-section contact-info">
-                        <h4 class="footer-title">İletişim Bilgileri</h4>
-                        <div class="contact-details">
-                            <div class="contact-detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="detail-content">
-                                    <p>Merkez Mah. Halıcılar Cad. No:123<br>
-                                        Fatih / İstanbul</p>
-                                </div>
-                            </div>
-                            <div class="contact-detail">
-                                <i class="fas fa-phone"></i>
-                                <div class="detail-content">
-                                    <p>+90 (212) 123 45 67<br>
-                                        +90 (535) 123 45 67</p>
-                                </div>
-                            </div>
-                            <div class="contact-detail">
-                                <i class="fas fa-envelope"></i>
-                                <div class="detail-content">
-                                    <p>info@kutsalhali.com<br>
-                                        satis@kutsalhali.com</p>
-                                </div>
-                            </div>
-                            <div class="contact-detail">
-                                <i class="fas fa-clock"></i>
-                                <div class="detail-content">
-                                    <p>Pazartesi - Cumartesi<br>
-                                        09:00 - 18:00</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen7.jpg" alt="Akrilik Saflı Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Akrilik Saflı Cami Halısı</h3>
+                        <p>Akrilik iplikten üretilmiş, dayanıklı ve canlı renkli saflı cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen9.jpg" alt="Klasik Göbekli Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Klasik Göbekli Cami Halısı</h3>
+                        <p>Klasik desenli, merkezinde göbek motifi bulunan geleneksel cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen10.jpg" alt="Modern Göbekli Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Modern Göbekli Cami Halısı</h3>
+                        <p>Modern çizgiler taşıyan, merkez göbek desenli çağdaş cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen11.jpg" alt="Mühr-ü Şerif Desenli Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Mühr-ü Şerif Desenli Cami Halısı</h3>
+                        <p>Mühr-ü şerif desenli, namaz kılmaya kolaylık sağlayan özel tasarım cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen12.jpg" alt="Lale Desenli Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Lale Desenli Cami Halısı</h3>
+                        <p>Lale motiflerini içeren, geleneksel Osmanlı desenli cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen13.jpg" alt="Çiçek Desenli Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Çiçek Desenli Cami Halısı</h3>
+                        <p>Geleneksel çiçek motifleriyle süslenmiş, zarif görünümlü cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/desen/desen14.jpg" alt="Geometrik Desenli Cami Halısı">
+                    </div>
+                    <div class="product-content">
+                        <h3>Geometrik Desenli Cami Halısı</h3>
+                        <p>Geometrik motiflerle tasarlanmış, modern görünümlü cami halısı.</p>
+                        <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn product-btn"
+                            target="_blank">Ürünleri
+                            İncele</a>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-content">
-                    <div class="copyright">
-                        <p>&copy; 2024 Kutsal Halı. Tüm hakları saklıdır.</p>
-                    </div>
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="footer-social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="footer-social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="footer-social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="footer-social-link" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                    <div class="footer-links">
-                        <a href="gizlilik.html">Gizlilik Politikası</a>
-                        <a href="kullanim.html">Kullanım Koşulları</a>
-                    </div>
-                </div>
-            </div>
+            <!-- <div class="see-all-products">
+                <a href="https://www.kasminahali.com.tr/cami-halisi/" class="btn btn-primary">
+                    <i class="fas fa-th-large"></i>
+                    Tüm Desenlerimizi Görüntüle
+                </a>
+            </div> -->
         </div>
-    </footer>
+    </section>
+
+    <section class="our-services">
+
+
+    </section>
+
+    <!-- Footer will be loaded automatically -->
+    <div id="footer-placeholder"></div>
 
     <!-- JavaScript -->
     <script src="js/slider.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/header-footer.js"></script>
 </body>
 
 </html>

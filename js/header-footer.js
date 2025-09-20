@@ -8,11 +8,11 @@
  * 3. Bu script'i sayfanın en altına ekleyin: <script src="js/header-footer.js"></script>
  */
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Header ve footer için placeholder elementlerini bulalım
     const headerPlaceholder = document.getElementById('header-placeholder');
     const footerPlaceholder = document.getElementById('footer-placeholder');
-    
+
     // Header HTML içeriği
     const headerHTML = `
     <!-- Header Section -->
@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     <!-- Logo -->
                     <div class="logo">
                         <a href="index.html">
-                            <img src="assets/images/logo.png" alt="Kutsal Halı" class="logo-img">
                             <div class="logo-text">
                                 <h1>Kutsal Halı</h1>
                                 <span>Cami Halıları Uzmanı</span>
@@ -113,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     <!-- Company Info -->
                     <div class="footer-section company-info">
                         <div class="footer-logo">
-                            <img src="assets/images/logo-white.png" alt="Kutsal Halı" class="footer-logo-img">
                             <h3>Kutsal Halı</h3>
                         </div>
                         <p class="company-description">
@@ -234,19 +232,19 @@ document.addEventListener("DOMContentLoaded", function() {
     function setActiveLink() {
         // Geçerli sayfa yolunu alalım
         const currentPage = window.location.pathname.split('/').pop();
-        
+
         // Eğer header eklendiyse
         if (headerPlaceholder) {
             // Tüm menü linklerini bulalım
             const menuLinks = headerPlaceholder.querySelectorAll('.menu-item');
-            
+
             // Her link için kontrol edelim
             menuLinks.forEach(menuItem => {
                 const link = menuItem.querySelector('a');
                 const href = link.getAttribute('href');
-                
+
                 // Eğer link geçerli sayfaya eşitse ya da ana sayfa için özel durum
-                if (href === currentPage || 
+                if (href === currentPage ||
                     (currentPage === '' || currentPage === '/' || currentPage === 'index.html') && href === 'index.html') {
                     menuItem.classList.add('active');
                 } else {
@@ -259,13 +257,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // Header'ı sayfaya ekleyelim
     if (headerPlaceholder) {
         headerPlaceholder.innerHTML = headerHTML;
-        
+
         // Mobil menü fonksiyonunu ekleyelim
         const mobileToggle = document.querySelector('.mobile-toggle');
+        const mainMenu = document.querySelector('.main-menu');
         const menuList = document.querySelector('.menu-list');
-        
-        if (mobileToggle && menuList) {
-            mobileToggle.addEventListener('click', function() {
+
+        if (mobileToggle && mainMenu && menuList) {
+            mobileToggle.addEventListener('click', function () {
+                mainMenu.classList.toggle('active');
                 menuList.classList.toggle('active');
                 mobileToggle.classList.toggle('active');
             });
