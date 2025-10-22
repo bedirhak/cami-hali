@@ -6,8 +6,8 @@ const sliderConfig = {
     images: [
         'assets/images/slider/slider1.jpg',
         'assets/images/slider/slider2.jpg',
-        'assets/images/slider/slider1.jpg',
-        'assets/images/slider/slider1.jpg'
+        'assets/images/slider/slider3.jpg',
+        // 'assets/images/slider/slider1.jpg'
     ],
     // Otomatik geçiş süresi (milisaniye)
     autoSlideDelay: 5000,

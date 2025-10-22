@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="contact-info">
                         <span class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <a href="tel:+902121234567">+90 (212) 123 45 67</a>
+                            <a href="tel:+902364621111">+90 (236) 462 11 11</a>
                         </span>
                         <span class="contact-item">
                             <i class="fas fa-envelope"></i>
